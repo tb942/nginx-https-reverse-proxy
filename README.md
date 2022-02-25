@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repo is the config for my local nginx instance that provides https to my portainer instance and my grafana [internet monitoring](https://github.com/tb942/internet-monitoring/tree/personal-use) instance.
+This repo is the config for my local nginx instance that provides https to my [portainer instance](https://github.com/tb942/Portainer-config) and my [grafana internet monitoring instance](https://github.com/tb942/internet-monitoring/tree/personal-use).
 
 This nginx instance is set up for the following domains to be DNS pointed to it:
 
@@ -45,7 +45,7 @@ I use the network name `main`, you can call it whatever you want.
 docker network create main
 ```
 
-This is the same network that my [internet monitoring](https://github.com/tb942/internet-monitoring/tree/personal-use) and portainer instances exist on.
+This is the same network that my [internet monitoring](https://github.com/tb942/internet-monitoring/tree/personal-use) and [portainer](https://github.com/tb942/Portainer-config) instances exist on.
 
 ### Deployment
 
