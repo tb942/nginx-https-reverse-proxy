@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  nginx:
+    build: .
+    restart: unless-stopped
+    networks:
+      pub_net:
+        ipv4_address: 192.168.0.192
+      main:
+    secrets:
+      - portainer_cert
+      - portainer_key
+      - speed_cert
+      - speed_key
+
+networks:
+  pub_net:
+    external: true
+  main:
+    external: true
+
+secrets:
+   portainer_cert:
+     file: certs/portainer.lan.pem
+   portainer_key:
+     file: certs/portainer.lan-key.pem
+   speed_cert:
+     file: certs/speed.lan.pem
+   speed_key:
+     file: certs/speed.lan-key.pem
