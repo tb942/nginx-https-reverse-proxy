@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   nginx:
-    build: .
+    image: nginx:latest
     restart: unless-stopped
     networks:
       pub_net:
@@ -12,6 +12,8 @@ services:
       - portainer_key
       - speed_cert
       - speed_key
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
 
 networks:
   pub_net:
